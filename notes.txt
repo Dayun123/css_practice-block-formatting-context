@@ -30,3 +30,8 @@ In a block formatting context, the vertical margins between adjacent elements wi
 Inline elements participate in an inline formatting context. They display one after the other in the direction that sentences run in the writing mode, so in English they display to the right of each other. Inline elements have a box, just like block level elements. The lines created by inline boxes are known as line boxes. The height of a line box is determined by the largest element in the line box.
 
 In addition to the two formatting contexts that occur normally, inline and block, the display property allows you to create new formatting contexts for an element and it's direct children. Each element has an outer and an inner display type. In the case of an element set with the display: flex, the outer display type will behave like a block level element, and the inner display type will be flex for all direct children. Any grandchildren will revert to normal flow formatting contexts. Think of every CSS box as having an outer display type, which controls how it interacts with other boxes, and an inner display type, which controls how the boxes within it interact.
+
+In Flow and Out of Flow:
+
+  - Resource: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow
+
