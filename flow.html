@@ -5,6 +5,18 @@
   <link rel="stylesheet" type="text/css" href="flow-style.css">
 </head>
 <body>
-
+  <!-- Understanding block formatting context. The <p> elements are block-level elements, so they participate in a block formatting context. This means they will appear one after the other, vertically, and the separation between them will be determined by their margins (which the browser will add automatically unless we say otherwise). In my browser (chromium) the margin is 8px around each paragraph, and this collapses between them so there is only 8px of vertical space between them not 16px. -->
+  <p class="box">I'm a paragraph that has an automatic margin applied.</p>
+  <p class="box">I'm another paragraph with an auto margin</p>
+  <!-- These paragraphs have the margins removed so they sit directly on top of each other -->
+  <p class="box no-margin">I don't have any margin. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim v.</p>
+  <p class="box no-margin">I don't have any margin. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim v.</p>
+  <!-- The paragraphs above all took up the entire vertical space that the content of the paragraphs needed. If we want them to stay at a certain width, we can add a width property to the <p> elements and then they won't take up all of the inline width. They will still stack on top of each other though. -->
+  <p class="box half-width">I take up 50% of the width of my containing element, but notice how we still stack on top of each other. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+  <p class="box half-width">I take up 50% of the width of my containing element, but notice how we still stack on top of each other. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
 </body>
 </html>

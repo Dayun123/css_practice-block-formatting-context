@@ -17,3 +17,10 @@ How does flow work?
 
   - Resource: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow
 
+  - Resource: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
+
+This guide explains how block and inline elements behave when they are part of the normal flow. Normal flow states that any boxes must be part of a formatting context, which can be block or inline, but not both at once. Block level boxes participate in a block formatting context while inline-level boxes participate in an inline formatting context.
+
+In block formatting context, boxes are laid out one after the other vertically starting at the top of the containg block. The vertical distance between two adjacent (sibling) boxes is determined by the margin property, and these vertical margins can collapse.
+
+In and inline formatting context, boxes are laid out one after the other horizontally.
