@@ -18,5 +18,9 @@
   <p class="box half-width">I take up 50% of the width of my containing element, but notice how we still stack on top of each other. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+
+  <!-- Margin collapsing. When two block level elements occur one after the other vertically, and the top element has a bottom margin and the bottom element has a top margin, the margin between the two elements is the largest of the two. -->
+  <p class="box top-box">I'm the top box, and I have a bottom margin of 20px.</p>
+  <p class="box bottom-box">I'm the bottom box, and I have a top margin of 40px, so the margin between me and the box above me is 40px, since I have the larger of the two colliding margins. Hooray margin collapsing!</p>
 </body>
 </html>

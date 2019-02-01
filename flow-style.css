@@ -9,3 +9,11 @@
 .half-width {
   width: 50%;
 }
+
+.top-box {
+  margin-bottom: 20px;
+}
+
+.bottom-box {
+  margin-top: 40px;
+}
