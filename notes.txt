@@ -3,3 +3,12 @@ Block Formatting Context Notes:
 MDN Docs
   - Resource: https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context
 
+Block formatting contexts are important for the positioning and clearing of floats.
+
+If you have a containing element, and then an element inside that container and you float it, it can extend beyond to borders of the containing element because it has been taken out of the flow (see this article: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow).
+
+If you want to contain the floated element with it's parent container, you will need to create a new block formatting context by using overflow: auto, or, a better way, using display: flow-root.
+
+Using overflow: auto is problematic though, as it is supposed to be used to tell the browser how to deal with overflowing content, NOT to soley create a new block formatting context (although it also creates a new BFC).
+
+When using display: flow-root, you are telling the element that you use it on that everything inside of that container participates in the block formatting context of that container, which is what you really want to do to contain a floated element. See the article on Flow Layout above to learn how this works better.

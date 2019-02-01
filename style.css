@@ -1,9 +1,14 @@
 .mdn__container {
   background-color: yellow;
   border: 5px solid black;
+  /* This is one way to deal with the fact that the floated element in this container sticks out of the bottom. The overflow property is supposed to be used for overflowing content in an element, but can be problematic so it is better to use display: flow-root; instead */
+  /*overflow: auto;*/
+  /* This establishes a new block formatting context for the contents of this div, which means the floated box will now be contained within this element. */
+  display: flow-root;
 }
 
 .mdn__float-box {
+  /* floating this box will make it stick out the bottom of the container. */
   float: left;
   width: 200px;
   height: 200px;
