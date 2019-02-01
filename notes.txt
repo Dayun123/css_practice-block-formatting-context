@@ -12,3 +12,8 @@ If you want to contain the floated element with it's parent container, you will 
 Using overflow: auto is problematic though, as it is supposed to be used to tell the browser how to deal with overflowing content, NOT to soley create a new block formatting context (although it also creates a new BFC).
 
 When using display: flow-root, you are telling the element that you use it on that everything inside of that container participates in the block formatting context of that container, which is what you really want to do to contain a floated element. See the article on Flow Layout above to learn how this works better.
+
+How does flow work?
+
+  - Resource: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow
+
