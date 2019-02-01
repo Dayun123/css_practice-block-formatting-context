@@ -36,3 +36,12 @@ In Flow and Out of Flow:
   - Resource: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow
 
 Elements of a page can be said to be in flow if they appear on the page in the same order that they do in the source code, and behave according to their formatting contexts (block or inline).
+
+All elements are in flow except:
+  * floated elements
+  * elements with position: absolute or position: fixed
+  * the root <html> element
+
+Out of flow items create a new block formatting context, so everything inside them can be seen as a mini layout, separate from the rest of the page. The root <html> element is out of flow because it is the container for everything in the document, and therefore creates it's own block formatting context.
+
+When you float an item, you remove it from the formatting context it is in, and it is out of flow. To make space around floated items, you have to add margin to the floated item, so that it will push elements in the normal flow away from it. If you try to use margin and padding on the in-flow items to get some distance from a floated item, you won't be succsseful.
