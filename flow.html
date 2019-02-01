@@ -5,13 +5,17 @@
   <link rel="stylesheet" type="text/css" href="flow-style.css">
 </head>
 <body>
+  <h1>Block Formattig Context</h1>
   <!-- Understanding block formatting context. The <p> elements are block-level elements, so they participate in a block formatting context. This means they will appear one after the other, vertically, and the separation between them will be determined by their margins (which the browser will add automatically unless we say otherwise). In my browser (chromium) the margin is 8px around each paragraph, and this collapses between them so there is only 8px of vertical space between them not 16px. -->
+  <h2>Auto Margins between paragraphs</h2>
   <p class="box">I'm a paragraph that has an automatic margin applied.</p>
   <p class="box">I'm another paragraph with an auto margin</p>
   <!-- These paragraphs have the margins removed so they sit directly on top of each other -->
+  <h2>No margins between paragraphs</h2>
   <p class="box no-margin">I don't have any margin. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim v.</p>
   <p class="box no-margin">I don't have any margin. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim v.</p>
   <!-- The paragraphs above all took up the entire vertical space that the content of the paragraphs needed. If we want them to stay at a certain width, we can add a width property to the <p> elements and then they won't take up all of the inline width. They will still stack on top of each other though. -->
+  <h2>Reduced width of block-level paragraphs</h2>
   <p class="box half-width">I take up 50% of the width of my containing element, but notice how we still stack on top of each other. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
@@ -20,7 +24,16 @@
   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
 
   <!-- Margin collapsing. When two block level elements occur one after the other vertically, and the top element has a bottom margin and the bottom element has a top margin, the margin between the two elements is the largest of the two. -->
+  <h2>Margin collapsing</h2>
   <p class="box top-box">I'm the top box, and I have a bottom margin of 20px.</p>
   <p class="box bottom-box">I'm the bottom box, and I have a top margin of 40px, so the margin between me and the box above me is 40px, since I have the larger of the two colliding margins. Hooray margin collapsing!</p>
+
+  <!-- Line boxes are created between inline elements which participate in an inline formatting context. -->
+  <h1>Line Boxes</h1>
+  <p>There are three line boxes present in this paragraph. This, and all that precedes are in the first line box, but can't be targeted directly, and it's known as an anonymous box.<strong>This strong element is a line box that can be targeted. </strong>And this is not inside of an inline element, but is still a line box, and can't be directly targeted, and is also an anonymous box.</p>
+
+  <!-- The height of a line box is defined by the tallest box inside it. So in this example the <strong> element has a height of 50px so the line box it is inside will have that same height. -->
+    <p>This is an anonymous line box.<strong class="tall-box">This is a line box that is inside of a strong element and affects the height of the line.</strong> This is another anonymous line box.</p>
+
 </body>
 </html>
