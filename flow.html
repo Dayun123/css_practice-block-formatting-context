@@ -33,7 +33,22 @@
   <p>There are three line boxes present in this paragraph. This, and all that precedes are in the first line box, but can't be targeted directly, and it's known as an anonymous box.<strong>This strong element is a line box that can be targeted. </strong>And this is not inside of an inline element, but is still a line box, and can't be directly targeted, and is also an anonymous box.</p>
 
   <!-- The height of a line box is defined by the tallest box inside it. So in this example the <strong> element has a height of 50px so the line box it is inside will have that same height. -->
-    <p>This is an anonymous line box.<strong class="tall-box">This is a line box that is inside of a strong element and affects the height of the line.</strong> This is another anonymous line box.</p>
+  <p>This is an anonymous line box.<strong class="tall-box">This is a line box that is inside of a strong element and affects the height of the line.</strong> This is another anonymous line box.</p>
+
+  <!-- The display type of an element dictates the formatting context of the element and it's children children. -->
+  <h1>Using 'Display' To Change the Formatting Context</h1>
+  <!-- The .flex-container and it's direct children will participate in the flex formatting context -->
+  <div class="flex-container">
+    <p>I'm a paragraph that is a direct child of the flex container, so I'm a flex item and participate in the flex formatting context.</p>
+    <p>I'm a paragraph that is a direct child of the flex container.</p>
+    <div>
+      <!-- These are not direct children of the flex-container, so they participate in the normal flow, which means they are in the block formatting context since they are block-level elements. -->
+      <p>I'm a paragraph that is NOT a direct child of the flex container, so I participate in the block formatting context.</p>
+      <p>I'm a paragraph that is NOT a direct child of the flex container.</p>
+      <p>I'm a paragraph that is NOT a direct child of the flex container.</p>
+    </div>
+  </div>
+
 
 </body>
 </html>

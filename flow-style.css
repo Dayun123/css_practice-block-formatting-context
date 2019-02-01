@@ -21,3 +21,20 @@
 .tall-box {
   font-size: 50px;
 }
+
+.flex-container {
+  display: flex;
+  border: 2px dashed yellow;
+}
+
+/*
+The > selects the immediate children of the .flex-container, and the * is a wildcard that means 'all'. If it was written:
+
+.flex-container > p
+
+Then all the child <p> elements in the flex-container would get the rule.
+
+*/
+.flex-container > * {
+  border: 2px solid black;
+}
