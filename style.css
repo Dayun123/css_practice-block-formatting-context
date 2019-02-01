@@ -1,0 +1,13 @@
+.mdn__container {
+  background-color: yellow;
+  border: 5px solid black;
+}
+
+.mdn__float-box {
+  float: left;
+  width: 200px;
+  height: 200px;
+  background: grey;
+  color: #fff;
+  border: 2px solid red;
+}
