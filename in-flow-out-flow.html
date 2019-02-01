@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>In Flow and Out of Flow</title>
+  <link rel="stylesheet" type="text/css" href="in-flow-out-flow.css">
+</head>
+<body>
+  <!-- The items in the .box below will all be laid out according to normal flow, which means block level elements will stack vertically and inline elements will appear horizontally. The <ul> will be a flex container, and it's outer display type will be block, which is what a <ul> normally is, but it's inner display type will be flex. THe <li>'s inside of the <ul> will be flex items. -->
+  <div class="box">
+    <h1>A Heading (block level)</h1>
+    <p>This paragraph is block level so it participates in the normal flow of the document. Notice how the container below holds 4 flex items that are in a flex flow, but the container itself is a block level element.   </p>
+    <ul>
+      <li>We</li>
+      <li>Are</li>
+      <li>Flex</li>
+      <li>Items</li>
+    </ul>
+    <p>This paragraph is block level. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+  </div>
+</body>
+</html>

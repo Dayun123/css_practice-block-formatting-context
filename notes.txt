@@ -35,3 +35,4 @@ In Flow and Out of Flow:
 
   - Resource: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow
 
+Elements of a page can be said to be in flow if they appear on the page in the same order that they do in the source code, and behave according to their formatting contexts (block or inline).
