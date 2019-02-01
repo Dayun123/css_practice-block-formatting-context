@@ -31,3 +31,22 @@ li {
   background-color: grey;
   /*margin: 20px;*/
 }
+
+/***************************/
+
+.abs-container {
+  border: 2px solid black;
+}
+
+.abs-container > * {
+  border: 2px dashed blue;
+}
+
+.abs {
+  position: absolute;
+  background-color: #FFAAAA;
+  top: 700px;
+  /*right: 50px;*/
+  left: 50px;
+  width: 300px;
+}
