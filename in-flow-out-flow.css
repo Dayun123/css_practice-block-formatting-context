@@ -50,3 +50,21 @@ li {
   left: 50px;
   width: 300px;
 }
+
+/****************************/
+
+.rel-container {
+  border: 1px solid black;
+}
+
+.rel-container > * {
+  border: 1px dashed blue;
+}
+
+.rel {
+  position: relative;
+  background-color: #FFAAAA;
+  top: -35px;
+  left: 50px;
+  width: 300px;
+}
